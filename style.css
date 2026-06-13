@@ -532,25 +532,33 @@ footer hr{
 @media(max-width:768px){
 
     .navbar{
-        padding:10px 3%;
-        flex-wrap:wrap;
+        padding:8px 4%;
+        flex-wrap:nowrap;
+        justify-content:space-between;
     }
 
     .logo img{
-        height:45px;
+        height:40px;
     }
 
     .nav-links{
-        gap:10px;
-        font-size:0.8rem;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:8px;
+        font-size:0.75rem;
+    }
+
+    .nav-links a{
+        font-size:0.9rem;
     }
 
     #theme-toggle{
-        padding:6px 10px;
-        font-size:15px;
+        padding:6px 8px;
+        font-size:14px;
     }
 
-    section{
-        padding:80px 5%;
+    .hero{
+        padding-top:180px;
     }
 }

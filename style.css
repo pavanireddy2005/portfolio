@@ -20,7 +20,9 @@
 body{
     background:var(--bg-color);
     color:var(--text-color);
-    transition:0.3s;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 /* Light Mode */
@@ -28,6 +30,104 @@ body.light-mode{
     --bg-color:#f8fafc;
     --card-color:#ffffff;
     --text-color:#1e293b;
+
+    --accent:#06b6d4;
+    --accent-hover:#0891b2;
+}
+
+/* =========================
+   Light Mode Custom Styling
+========================= */
+
+body.light-mode .navbar{
+    background:rgba(248,250,252,0.95);
+    border-bottom:1px solid #e2e8f0;
+}
+
+body.light-mode .nav-links a,
+body.light-mode .hamburger{
+    color:#1e293b;
+}
+
+/* Gradient Borders */
+
+body.light-mode .education-card::before,
+body.light-mode .achievement-card::before,
+body.light-mode .project-card::before{
+    background:linear-gradient(
+        90deg,
+        #06b6d4,
+        #3b82f6,
+        #6366f1
+    );
+}
+
+/* Card Hover Effects */
+
+body.light-mode .education-card:hover,
+body.light-mode .achievement-card:hover,
+body.light-mode .project-card:hover,
+body.light-mode .skill-card:hover{
+    box-shadow:0 0 20px rgba(59,130,246,0.30);
+}
+
+body.light-mode .logo img{
+    filter:
+        saturate(1.15)
+        brightness(1.05);
+}
+
+/* Profile Image */
+
+body.light-mode .profile-container img{
+    border:5px solid #3b82f6;
+
+    box-shadow:
+    0 0 25px rgba(59,130,246,0.30);
+}
+
+/* Hero Heading */
+
+body.light-mode .hero-content h1{
+    color:#0ea5e9;
+}
+
+/* Achievement Text */
+
+body.light-mode .achievement-card p{
+    color:#475569;
+}
+
+/* Contact Form */
+
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea{
+    border:1px solid #ffd6d6;
+}
+
+/* Footer */
+
+body.light-mode footer{
+    background:#ffffff;
+    border-top:1px solid #e2e8f0;
+}
+
+body.light-mode .footer-content p,
+body.light-mode .copyright,
+body.light-mode .social-links a{
+    color:#475569;
+}
+
+/* Social Icons Hover */
+
+body.light-mode .social-links a:hover{
+    color:#ff6b6b;
+}
+
+/* Contact info */
+
+body.light-mode .contact-item i{
+    color:var(--accent);
 }
 
 /* Navbar */
